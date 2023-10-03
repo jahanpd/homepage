@@ -9,4 +9,5 @@ export default defineConfig({
     // Example: Generate `page.html` instead of `page/index.html` during build.
     format: 'file'
   },
+  site: 'https://jcpd.xyz',
 });
