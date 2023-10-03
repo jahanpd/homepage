@@ -6,7 +6,7 @@
 <!-- 2023-10-03 Tue 20:35 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Euler's Method for solving Differential Equations</title>
+<title>First Order Linear Differential Equations</title>
 <meta name="author" content="Jahan PD" />
 <meta name="generator" content="Org Mode" />
 <link rel="icon" type="image/svg+xml" href="/caicon.ico" />
@@ -243,37 +243,35 @@ body {
  |
  <a accesskey="H" href="/"> HOME </a>
 </div><div id="content" class="content">
-<h1 class="title">Euler's Method for solving Differential Equations</h1>
+<h1 class="title">First Order Linear Differential Equations</h1>
 <p>
-There are 3 main ways to solve <a href="20230918125159-differential_equations.html#ID-0975A8A8-1C7C-4D4B-8849-61531BFC7FBE">Differential Equations</a>, the easiers of the numerical methods is Eulers.
+The first order linear ODE is a powerful class of solvable ODEs. They are defined by the following two equivalent terms.
 </p>
 
 <p>
-It's a super simple method that basically takes some IVP (initial value problem: the DE and some starting postion) and iterates from that position using the slope from the DE and some step size 'h'.
+\\[ A(t) \\frac{dx}{dt} + B(t)x(t) = C(t) \\]
 </p>
 
 <p>
-Eulers Equations:
+Or if we factor out the \\( A(t) \\):
 </p>
 
 <p>
-\\[ x_{n+1} = x_n + h \\]
-\\[ y_{n+1} = y_n + h \\, A_n \\]
-\\[ A_n = f(x_n, y_n) \\]
+\\[ \\frac{dx}{dt} + p(t)x(t) = q(t) \\]
+</p>
+
+<p>
+Where \\(p(t) = \\frac{B(t)}{A(t)} \\).
 </p>
 
 
-<div id="outline-container-orgca4ef8c" class="outline-2">
-<h2 id="orgca4ef8c"><span class="section-number-2">1.</span> Associated Notes</h2>
+<div id="outline-container-org3887840" class="outline-2">
+<h2 id="org3887840"><span class="section-number-2">1.</span> Associated Notes</h2>
 <div class="outline-text-2" id="text-1">
-<div class="tag" id="org557844c">
+<div class="tag" id="org453e756">
 <p>
 
 </p>
-
-<ul class="org-ul">
-<li><a href="20230924115447-choas_from_numerical_approximation.html#ID-60FF6CF7-CC33-4005-A3B9-4CC1698895E7">Choas from Numerical Approximation</a></li>
-</ul>
 
 </div>
 </div>
