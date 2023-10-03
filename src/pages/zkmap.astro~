@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ZkList from '../assetts/zklist.json';
+---
+
+<Layout title="ZK Map">
+    <div class="px-4 pt-4">
+	<ul class="px-4 pb-3 sm:px-8 list-disc">
+	{Object.keys(ZkList).map((item) => (
+	    <li> <a href={"./zk/" + item}> {ZkList[item][0]} </a></li>
+	))}
+	</ul>
+    </div>
+</Layout>

@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-09-24 Sun 12:09 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Model of Life</title>
+<meta name="author" content="Jahan PD" />
+<meta name="generator" content="Org Mode" />
+<link rel="icon" type="image/svg+xml" href="/caicon.ico" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+
+body {
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; max-width: 60em; margin: auto;}
+  .status { padding-top: 50px;}
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per \"defun org-babel-execute\"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf \" \")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: center; font-size: 100%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="/zkmap"> UP </a>
+ |
+ <a accesskey="H" href="/"> HOME </a>
+</div><div id="content" class="content">
+<h1 class="title">Model of Life</h1>
+<p>
+The mystery of how biological life is generated is truly vexing.
+There are many principles that seem important.
+These include physical, computational, and mathematical principles.
+Curiously, the least important is the raw biology, as understanding life is really asking how biology emerges from some fundamental process.
+</p>
+
+<p>
+Below I outline my current thesis for how and why life emerges.
+</p>
+
+<div id="outline-container-org657d72d" class="outline-2">
+<h2 id="org657d72d"><span class="section-number-2">1.</span> Entropy and complexity</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+The thermodynamic entropy of a system will always increase. This is the second law (SLOT).
+By contrast, the complexity of the system in disequilibrium will initially increase and then decrease again <a href="#orga00fc53">Figure 1</a>.
+</p>
+
+
+<div id="orga00fc53" class="figure">
+<p><img src="https://www.researchgate.net/profile/Juergen-Kurths/publication/226005150/figure/fig2/AS:667634106384398@1536187783838/Evolution-of-the-entropy-S-Eq-1-and-of-the-information-gain-complexity-G-Eq-6.png" alt="Evolution-of-the-entropy-S-Eq-1-and-of-the-information-gain-complexity-G-Eq-6.png" />
+</p>
+<p><span class="figure-number">Figure 1: </span>This shows the change of entropy and complexity over time of a system like pouring milk into coffee (taken from <a href="http://dx.doi.org/10.1007/s100510051157">http://dx.doi.org/10.1007/s100510051157</a>).</p>
+</div>
+
+<p>
+A simple example is pouring milk into coffee. Initially complexity is low and entropy is low (relatively) when liquids are separate.
+As the milk is poured in, the complexity increases as the milky frontier swirls in choatic complexity and dilutes down.
+The entropy increases, aka the liquids merge and molecular order decreases.
+Eventually there is no frontier, and the solution becomes simple again (complexity has decreased), and entropy is maximal with liquids completely mixed.
+</p>
+
+<p>
+While a trivial example, there is something profound about the system in choatic disequilibrium as it approaches equilibrium.
+The earth is a disequilibrium system.
+One side of the planet accepts photons with a peak energy density in the range of visible light, and loses photons with a energy density in the range of infrared (thermal) energy.
+While the energy in and energy out is the same, the magic of planet earth is what happens during this conversion.
+In some sense, the persistent disequilibrium of high energy photons being converted to low energy photons and re-emitted is the 'chaotic frontier' of planet earth.
+So life is born from the turbulent chaos of a photon conversion machine.
+</p>
+
+<p>
+Ok, so where is life in all of this? I don't see intelligence emerging in my mug every morning.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org65b1ed1" class="outline-2">
+<h2 id="org65b1ed1"><span class="section-number-2">2.</span> Dynamical Systems, Chaos, and Attractors</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Chaos can be modelled by dynamical systems, often defined by <a href="20230918125159-differential_equations.html#ID-0975A8A8-1C7C-4D4B-8849-61531BFC7FBE">Differential Equations</a>.
+These systems can produced attractors (sometime strange attractors if there is a fractal strcture).
+Physical systems on earth tend to revolve around attractors (such as hurricanes - for which the modelling inspired the Lorenz attractor).
+In a much more difficult modelling scenario, the paths of molecules and ions that form a 'simple' biological cell could be interpreted as forming around an attractor - the 'cell' attractor.
+Cells then follow paths that nest around a higher order attractor (eg a mouse attractor, or human attractor).
+For humans, these even higher order attractors then follow a path around a social network or group (societal attractor).
+</p>
+
+<p>
+Care must be taken to make sure this interpretation isn't a glib handwaving repurposing of the word attractor.
+While it's not exactly clear how attractors could form like this, there is work happening in this space.
+For example, <a href="https://doi.org/10.1109/ACCESS.2019.2900367">these guys</a> uncovered methods to construct chaotic systems with multiple co-existing attractors.
+This was followed by <a href="https://doi.org/10.1155/2020/8175639">these guys</a> who found a way to construct infinitely many attractors in a no-equilibrium chaotic system (sound familiar).
+While it's not exactly easy to show you could make a no-equilibrium chaotic system with attractors that have independent paths around bigger attractors&#x2026; it's at least conceivable.
+</p>
+
+<p>
+A very interesting study also found <a href="https://doi.org/10.1109/OJCAS.2020.3030756">self-reproducing attractors</a>, which opens up that possibility to evolutionary systems.
+</p>
+
+<p>
+This whole area is something I'm still learning a lot about, but I am enjoying playing with these ideas that are (seemingly) fundamental.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5b6bd0d" class="outline-2">
+<h2 id="org5b6bd0d"><span class="section-number-2">3.</span> Cellular Automata</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Another way of viewing the problem is through the lens of cellular automata.
+These are discrete systems that can produce similar behaviours to their continuous brethren from dynamical systems.
+These tricky little computational systems seem like a perfect analogy for life.
+Starting with simple rule set and space of cells, you iterate across time and observe what happens.
+In it's most extreme you can perform any computation with such a system and even simulate a CA in a CA, such as the game of life in the <a href="#orgdbf587d">game of life</a>.
+</p>
+
+
+<div id="orgdbf587d" class="figure">
+<p><img src="https://static01.nyt.com/images/2020/12/23/science/00SCI-CONWAY-zucconi-image/00SCI-CONWAY-zucconi-image-videoSixteenByNine768.jpg" alt="00SCI-CONWAY-zucconi-image-videoSixteenByNine768.jpg" />
+</p>
+<p><span class="figure-number">Figure 2: </span>Conways Game of Life in the Game of Life</p>
+</div>
+
+<p>
+CA also can exibit attractor-like behaviours, and even the word cell smacks of biology.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc38ee95" class="outline-2">
+<h2 id="orgc38ee95"><span class="section-number-2">4.</span> Conditions for Life</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+What are the perfect conditions that can foster life?
+Based on my thoughts above, you need at least the following:
+</p>
+<ol class="org-ol">
+<li>A non-equilibrium system (this doesn't mean the system could never reach equilibrium but at the very least is being kept out of equilibrium)</li>
+<li>Some luck in landing the right calibration of the constants that dictate the behaviour of the potential chaos in that non-equilibrium system.</li>
+</ol>
+</div>
+</div>
+
+
+<div id="outline-container-org73ddb2a" class="outline-2">
+<h2 id="org73ddb2a"><span class="section-number-2">5.</span> Associated Notes</h2>
+<div class="outline-text-2" id="text-5">
+<div class="tag" id="orgf039ac3">
+<p>
+
+</p>
+
+<ul class="org-ul">
+<li><a href="20230924115447-choas_from_numerical_approximation.html#ID-60FF6CF7-CC33-4005-A3B9-4CC1698895E7">Choas from Numerical Approximation</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Jahan PD</p>
+<p class="date">Created: 2023-09-24 Sun 12:09</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
