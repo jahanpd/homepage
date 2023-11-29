@@ -1,5 +1,0 @@
----
-import Layout from '../layouts/Layout.astro';
-import List from '../components/ZKList.jsx';
----
-
