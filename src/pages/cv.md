@@ -1,8 +1,8 @@
 ---
 layout: ../layouts/LayoutCV.astro
-title: Astro in brief
-author: Himanshu
-description: Find out what makes Astro awesome!
+title: CV
+author: Jahan PD
+description: A compilation of things that I've done.
 ---
 <div class="p-3">
 	<h1 class="font-bold text-xl pb-2">Mission Statement</h1>
@@ -37,7 +37,7 @@ As a clinician-scientist, my career goals are to firstly deliver high quality he
 			<div> Surgical Resident </div>
 			<div class="font-bold"> Barwon Health </div>
 		</div>
-		<div class="w-full"> Rotations in General Surgery and Cardiothorcic Surgery </div>
+		<div class="w-full"> Rotations in General Surgery and Cardiothoracic Surgery </div>
 	</div>
 	<div class="flex flex-row pb-3">
 		<div class="w-72 italic"> 2018 - 2019 </div>
@@ -90,6 +90,38 @@ As a clinician-scientist, my career goals are to firstly deliver high quality he
 			<div class="font-bold"> Adelaide University</div>
 		</div>
 		<div class="w-full"> Cello at the Elder Conservatorium of Music</div>
+	</div>
+</div>
+
+<div class="p-3">
+	<h1 class="font-bold text-xl pb-3">Courses and Professional Development</h1>
+	<div class="flex flex-row pb-3">
+		<div class="w-72 italic"> 2024 </div>
+		<div class="w-full"> 
+			<div> Advanced Paediatrict Life Support (APLS) - TBC in September </div>
+			<div class="font-bold"> APLS  </div>
+		</div>
+	</div>
+	<div class="flex flex-row pb-3">
+		<div class="w-72 italic"> 2021 </div>
+		<div class="w-full"> 
+			<div> Advanced Life Support (ALS) 2  </div>
+			<div class="font-bold"> University of Adelaide  </div>
+		</div>
+	</div>
+	<div class="flex flex-row pb-3">
+		<div class="w-72 italic"> 2020 </div>
+		<div class="w-full"> 
+			<div> Emergency Management of Surgical Trauma </div>
+			<div class="font-bold"> RACS </div>
+		</div>
+	</div>
+	<div class="flex flex-row pb-3">
+		<div class="w-72 italic"> 2020 </div>
+		<div class="w-full"> 
+			<div> Australian and New Zealand Surgical Skills Education and Training (ASSET) course </div>
+			<div class="font-bold"> RACS </div>
+		</div>
 	</div>
 </div>
 
