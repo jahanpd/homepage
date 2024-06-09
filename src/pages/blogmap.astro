@@ -1,0 +1,10 @@
+---
+import Layout from '../layouts/Layout.astro';
+import List from '../components/BlogList.jsx';
+---
+
+<Layout title="Blog Map">
+    <div class="flex justify-center">
+	<List client:load />
+    </div>
+</Layout>

@@ -5,6 +5,7 @@ interface Props {
 
 const { title, description } = Astro.props;
 
+import CVHeader from '../components/CVHeader.astro';
 import Cite from 'citation-js';
 import Layout from '../layouts/LayoutCV.astro';
 const my_publications = ["https://doi.org/10.1371/journal.pone.0289930","https://doi.org/10.3389/fcvm.2023.1211600","https://doi.org/10.1111/jocs.16842","https://doi.org/10.48550/ARXIV.2211.07059","https://doi.org/10.1053/j.semtcvs.2020.09.028","https://doi.org/10.1016/j.hlc.2016.04.016"];
@@ -23,8 +24,22 @@ const getCitation = async (doi) => {
     return citor.format('bibliography', {format: 'text', template: 'harvard1', lang: 'en-US'})
 };
 
-let citations = await Promise.all(my_publications.map(pub => getCitation(pub)));
-let citations2 = await Promise.all(other_publications.map(pub => getCitation(pub)));
+// Function to create a delay
+const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+// Main function to process array with rate limiting
+const processArray = async (array) => {
+    let citations = [];
+    for (let item of array) {
+	const data = await getCitation(item);
+	citations.push(data);
+	await delay(50); // Wait befor next iteration
+    }
+    return citations
+};
+
+let citations = await processArray(my_publications);
+let citations2 = await processArray(other_publications);
 ---
 
 <!DOCTYPE html>
@@ -38,61 +53,33 @@ let citations2 = await Promise.all(other_publications.map(pub => getCitation(pub
 		<title>{title}</title>
 	</head>
 	<body>
-    <div class="font-serif p-5 max-w-5xl">
-	<div class="w-full flex p-5 border border-4 rounded-lg border-black border-solid">
-	    <div class="w-1/2">
-		<div class="text-2xl font-bold h-28">
-		    <h1>Jahan C. Penny-Dimri</h1>
+	    <div class="font-serif p-5 max-w-5xl">
+		<CVHeader
+		    name="Jahan C. Penny-Dimri"
+			  date="June 2024"
+			  address="Newtown, VIC 3220 Australia"
+			  website="jcpd.xyz"
+			  email="jahan.penny-dimri@[monash.edu]"
+			  github="jahanpd"
+		/>
+		
+		<div class="p-3">
+		    <h1 class="font-bold text-xl pb-2">Mission Statement</h1>
+		    
+		    As a clinician-scientist, my career goals are to
+		    firstly deliver high quality healthcare to my
+		    local community, and secondly to innovate
+		    cutting-edge technology that builds understanding
+		    and ultimately improves the health of our ageing
+		    population. My current research exists at the
+		    intersection of machine learning and improving
+		    outcomes in surgery and critical care, with the
+		    aim to build models with a flexible understanding
+		    of risk.
+
 		</div>
-		<div class="text-sm">
-		    <h1>Curriculum Vitae Nov 2023</h1>
-		</div>
-	    </div>
-	    <div class="text-sm w-1/2">
-		<div class="flex flex-row p-1">
-		    <div class="w-[50px]">
-			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-			<path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-			<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-			</svg>
-		    </div>
-		    <div class="flex items-center">
-			Newtown, VIC 3220, Australia
-		    </div>
-		</div>
-		<div class="flex flex-row p-1">
-		    <div class="w-[50px]">
-			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-			    <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
-			</svg>
-		    </div>
-		    <div class="flex items-center">
-			jcpd.xyz
-		    </div>
-		</div>
-		<div class="flex flex-row p-1">
-		    <div class="w-[50px]">
-			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-			    <path stroke-linecap="round" d="M16.5 12a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 10-2.636 6.364M16.5 12V8.25" />
-			</svg>
-		    </div>
-		    <div class="flex items-center">
-			jahan.penny-dimri@[monash.edu]
-		    </div>
-		</div>
-		<div class="flex flex-row p-1">
-		    <div class="w-[50px]">
-			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-		    </div>
-		    <div class="flex items-center">
-			jahanpd
-		    </div>
-		</div>
-	    </div>
-	    
-	</div>
-	
-	<slot/>
+
+		<slot/>
 	
 	<div class="p-4">
 	    <h1 class="font-bold text-xl pb-3">Publications</h1>

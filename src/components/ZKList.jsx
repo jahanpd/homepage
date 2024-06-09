@@ -7,7 +7,9 @@ import taglist from '../assetts/tagsdistinct.json';
 
 const List = ( ) => {
     const [selected, setSelected] = useState([]);
-    const options = taglist.filter(e => e != "zk").map((tag) => {return {value: tag, label: tag}});
+    const options = taglist.filter(e => e != "zk")
+	  .filter(e => e != "blog")
+	  .filter(e => e != "unfinished").map((tag) => {return {value: tag, label: tag}});
     if (taglist) {
 	return (
 	    <>

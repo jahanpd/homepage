@@ -4,14 +4,6 @@ title: CV
 author: Jahan PD
 description: A compilation of things that I've done.
 ---
-<div class="p-3">
-	<h1 class="font-bold text-xl pb-2">Mission Statement</h1>
-	
-<!-- As a clinician-scientist, my career goals are to firstly deliver high quality healthcare to my local community, and secondly to innovate cutting-edge technology that builds understanding and ultimately improves the health of our ageing population. My current research exists at the intersection of machine learning and self-organizing systems, with the ultimate goal of developing new principles of growth and ageing. By combining clinical expertise with the power of computational systems, I aim to advance our understanding of the dysfunction in self-organisation underlying aging and age-related diseases. -->
-
-As a clinician-scientist, my career goals are to firstly deliver high quality healthcare to my local community, and secondly to innovate cutting-edge technology that builds understanding and ultimately improves the health of our ageing population. My current research exists at the intersection of machine learning and improving outcomes in surgery and critical care, with the aim to build models with a flexible understanding of risk.
-
-</div>
 
 <div class="p-3">
 	<h1 class="font-bold text-xl pb-2">Employment and Academic Positions</h1>
@@ -95,13 +87,6 @@ As a clinician-scientist, my career goals are to firstly deliver high quality he
 
 <div class="p-3">
 	<h1 class="font-bold text-xl pb-3">Courses and Professional Development</h1>
-	<div class="flex flex-row pb-3">
-		<div class="w-72 italic"> 2024 </div>
-		<div class="w-full"> 
-			<div> Advanced Paediatrict Life Support (APLS) - TBC in September </div>
-			<div class="font-bold"> APLS  </div>
-		</div>
-	</div>
 	<div class="flex flex-row pb-3">
 		<div class="w-72 italic"> 2021 </div>
 		<div class="w-full"> 
