@@ -1,0 +1,11 @@
+---
+const { title, organisation, year } = Astro.props;
+---
+
+<div class="flex flex-row pb-3">
+	<div class="w-72 italic"> {year} </div>
+	<div class="w-full"> 
+		<div> {title}  </div>
+		<div class="font-bold"> {organisation}  </div>
+	</div>
+</div>

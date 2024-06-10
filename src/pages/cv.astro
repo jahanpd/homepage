@@ -3,8 +3,6 @@ interface Props {
     title: string;
 }
 
-const { title, description } = Astro.props;
-
 import CVHeader from '../components/CVHeader.astro';
 import CVPosition from '../components/CVPosition.astro';
 import CVEducation from '../components/CVEducation.astro';
@@ -52,21 +50,21 @@ let citations2 = await processArray(other_publications);
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content={description}>
+		<meta name="description" content="The CV (curriculum vitae) of Jahan C. Penny-Dimri">
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/caicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+		<title>Curriculum Vitae</title>
 	</head>
 	<body>
 	    <div class="font-serif p-5 max-w-5xl">
 		<CVHeader
-		    name="Jahan C. Penny-Dimri"
-			  date="June 2024"
-			  address="Newtown, VIC 3220 Australia"
-			  website="jcpd.xyz"
-			  email="jahan.penny-dimri@[monash.edu]"
-			  github="jahanpd"
+			  name={cvdata.header.name}
+			  date={cvdata.header.date}
+			  address={cvdata.header.address}
+			  website={cvdata.header.website}
+			  email={cvdata.header.email}
+			  github={cvdata.header.github}
 		/>
 		
 		<div class="p-3">

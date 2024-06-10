@@ -1,0 +1,82 @@
+{
+  "header": {
+    "name": "Jahan C. Penny-Dimri",
+    "date updated": "June 2024",
+    "address": "Newtown, VIC 3220 Australia",
+    "website": "jcpd.xyz",
+    "email": "{jahan.penny-dimri}@monash.edu",
+    "github": "jahanpd"
+  },
+  "mission": "As a clinician-scientist, my career goals are to firstly deliver\nhigh-quality healthcare to my local community, and secondly to\ninnovate cutting-edge technology that builds understanding and\nultimately improves the health of our ageing population. My current\nresearch exists at the intersection of machine learning and improving\noutcomes in surgery and critical care, aiming to build models\nwith a flexible understanding of risk.",
+  "positions": {
+    "Research Associate": {
+      "from": "2020",
+      "to": "Current",
+      "organisation": "Monash University",
+      "description": "Adjunct academic position"
+    },
+    "Surgical Registrar": {
+      "from": "2020",
+      "to": "Current",
+      "organisation": "Barwon Health",
+      "description": "Rotations in General Surgery, Vascular Surgery, Orthopaedics, Plastic Surgery"
+    },
+    "Surgical Resident": {
+      "from": "2019",
+      "to": "2020",
+      "organisation": "Barwon Health",
+      "description": "Rotations in General Surgery and Cardiothoracic Surgery"
+    },
+    "Internship": {
+      "from": "2018",
+      "to": "2019",
+      "organisation": "Ballarat Health",
+      "description": "Rotations in General Surgery, General Medicine, Emergency, and Orthopaedics"
+    }
+  },
+  "education": {
+    "PhD": {
+      "year": "2023",
+      "organisation": "Monash Univerity",
+      "description": "Development of a novel machine learning approach and web application\n(cardiac-ml.com) to predict and identify unique risk factors for\npostoperative outcomes after cardiac surgery."
+    },
+    "MBBS (Hons)": {
+      "year": "2017",
+      "organisation": "Monash Univerity",
+      "description": ""
+    },
+    "BSc (Hons)": {
+      "year": "2013",
+      "organisation": "Adelaide Univerity",
+      "description": "Honours research year developing a novel transduction model for\ntesting lentiviral based gene therapy for cystic fibrosis lung\ndisease."
+    },
+    "LLB (Hons)": {
+      "year": "2011",
+      "organisation": "Adelaide Univerity",
+      "description": "Honours degree with a thesis in medical law."
+    },
+    "Diploma of Instrumental Music": {
+      "year": "2011",
+      "organisation": "Adelaide Univerity",
+      "description": "Cello at the Elder Conservatorium of Music"
+    }
+  },
+  "professional_development": {
+    "Advanced Life Support (ALS) 2": {
+      "organisation": "University of Adelaide",
+      "year": "2021"
+    },
+    "Emergency Management of Surgical Trauma": {
+      "organisation": "RACS",
+      "year": "2020"
+    },
+    "Australian and New Zealand Surgical Skills Education and Training (ASSET) course": {
+      "organisation": "RACS",
+      "year": "2020"
+    }
+  },
+  "research_summary": {
+    "Areas of Interest": "Machine Learning, Dealing with Missing Data, Self-organisation, Cellular Automata.",
+    "H-index": "14.0"
+  }
+}
