@@ -2,6 +2,7 @@
 interface Props {
 	title: string;
 }
+import "../styles/global.css";
 
 const { title, description } = Astro.props;
 ---
@@ -19,9 +20,9 @@ const { title, description } = Astro.props;
 	<body>
 	    <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
 		<div class="flex flex-shrink-0 text-white mr-6 w-full sm:w-1/2 sm:justify-end sm:pr-9">
-		    <a href="/" class="font-semibold text-xl tracking-tight">j c p d . x y z </a>
+		    <a href="/" class="font-semibold text-xl tracking-tight font-mono">j c p d . x y z </a>
 		</div>
-		<div class="w-full block sm:flex-grow sm:flex sm:justify-start sm:w-auto">
+		<div class="w-full block sm:flex-grow sm:flex sm:justify-start sm:w-auto font-mono">
 		    <div class="text-sm">
 			<a href="/zkmap.html" class="block mt-4 sm:w-auto sm:inline-block sm:mt-0 text-teal-200 hover:text-white mr-4">
 			    Zettelkasten

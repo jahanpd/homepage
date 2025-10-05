@@ -3,17 +3,23 @@
     "name": "Jahan C. Penny-Dimri",
     "date updated": "June 2024",
     "address": "Newtown, VIC 3220 Australia",
-    "website": "jcpd.xyz",
-    "email": "{jahan.penny-dimri}@monash.edu",
+    "website": "www.jcpd.xyz",
+    "email": ["{me}@jcpd.xyz", "{jahan.penny-dimri}@monash.edu", "{jahan.penny-dimri}@wrh.ox.ac.uk"],
     "github": "jahanpd"
   },
-  "mission": "As a clinician-scientist, my career goals are to firstly deliver\nhigh-quality healthcare to my local community, and secondly to\ninnovate cutting-edge technology that builds understanding and\nultimately improves the health of our ageing population. My current\nresearch exists at the intersection of machine learning and improving\noutcomes in surgery and critical care, aiming to build models\nwith a flexible understanding of risk.",
+  "mission": "As a clinician-scientist, my high level career goal is to provide and improve the delivery of healthcare to my local community. I work on incorporating the latest innovations in intelligent systems to improve patient care. My current research exists at the intersection of AI safety and predicting outcomes in surgery and critical care, aiming to build models with a flexible understanding of risk.",
   "positions": {
+    "Research Fellow": {
+      "from": "2024",
+      "to": "2025",
+      "organisation": "Oxford University",
+      "description": "Postgraduate research in with Oxford Digital Health Labs (Nuffield Department of Women's and Reproductive Health)"
+    },
     "Research Associate": {
       "from": "2020",
       "to": "Current",
       "organisation": "Monash University",
-      "description": "Adjunct academic position"
+      "description": "Adjunct academic position with the Department of Surgery"
     },
     "Surgical Registrar": {
       "from": "2020",
@@ -76,7 +82,7 @@
     }
   },
   "research_summary": {
-    "Areas of Interest": "Machine Learning, Dealing with Missing Data, Self-organisation, Cellular Automata.",
-    "H-index": "14.0"
+    "Areas of Interest": "AI & Machine Learning, Dealing with Missing Data, Self-organisation, Cellular Automata.",
+    "H-index": "18.0"
   }
 }

@@ -1,0 +1,67 @@
+---
+interface Props {
+    title: string;
+}
+import "../styles/global.css";
+import LetterBody from '../components/LetterBody'
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="The CV (curriculum vitae) of Jahan C. Penny-Dimri">
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/caicon.ico" />
+		<link href="https://fonts.googleapis.com/css2?
+family=Inter:wght@400;500;600;700&
+family=Open+Sans:wght@400;600;700&
+family=Lato:wght@400;700&
+family=Poppins:wght@400;600;700&
+family=Roboto:wght@400;500;700&
+family=Source+Sans+3:wght@400;600;700&
+family=Nunito:wght@400;700&
+family=Work+Sans:wght@400;600;700&
+family=DM+Sans:wght@400;500;700&
+family=Manrope:wght@400;600;700&
+family=Outfit:wght@400;600;700&
+family=Merriweather:wght@400;700&
+family=Source+Serif+4:opsz,wght@8..60,400;8..60,700&
+family=EB+Garamond:wght@400;600;700&
+family=Playfair+Display:wght@400;600;700&
+family=Libre+Baskerville:wght@400;700&
+family=Crimson+Text:wght@400;700&
+family=Cormorant+Garamond:wght@400;600;700&
+family=Lora:wght@400;600;700&
+family=Noto+Serif:wght@400;700&
+family=IBM+Plex+Mono:wght@400;600;700&
+family=Source+Code+Pro:wght@400;600;700&
+family=Fira+Code:wght@400;600&
+family=JetBrains+Mono:wght@400;600;700&
+family=Inconsolata:wght@400;700&display=swap" rel="stylesheet">
+		<meta name="generator" content={Astro.generator} />
+		<title>Curriculum Vitae</title>
+	</head>
+	<body>
+	  <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6 print:hidden font-mono">
+				<div class="flex flex-shrink-0 text-white mr-6 w-full sm:w-1/2 sm:justify-end sm:pr-9">
+						<a href="/" class="font-semibold text-xl tracking-tight">j c p d . x y z </a>
+				</div>
+				<div class="w-full block sm:flex-grow sm:flex sm:justify-start sm:w-auto">
+						<div class="text-sm">
+					<a href="/cv.html" class="block mt-4 sm:w-auto sm:inline-block sm:mt-0 text-teal-200 hover:text-white mr-4">
+							C.V.
+					</a>
+					<a href="/cover.html" class="block mt-4 sm:w-auto sm:inline-block sm:mt-0 text-teal-200 hover:text-white mr-4">
+							Cover Letter
+					</a>
+						</div>
+				</div>
+	  </nav>
+
+	  <div class="p-5 w-[790px]">
+				<LetterBody client:load/>
+    </div>
+
+	</body>
+</html>
