@@ -1,8 +1,8 @@
 import {  useState, useEffect } from "react";
 import { openDB, type DBSchema } from 'idb';
 
-// const API_BASE = "https://ai.jcpd.xyz"
-const API_BASE = "http://localhost:8765"
+const API_BASE = "https://ai.jcpd.xyz"
+// const API_BASE = "http://localhost:8765"
 
 // Map each to a robust CSS font-family stack
 export const FONT_STACKS: Record<string, string> = {
