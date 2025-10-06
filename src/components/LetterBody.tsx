@@ -94,6 +94,7 @@ export default function LetterBody({
 	const changeLetter = async (id: string) => {
 			const newLetter = await getLetter(id)
 			setLetter(newLetter)
+			setText(newLetter.body)
 			setSelected(id)
 	}
 
@@ -211,7 +212,7 @@ export default function LetterBody({
       <textarea
 		    rows={1}
         onChange={(el) => {editLetter("body", el.target.value)}}
-				value={letter.body}
+				value={text}
         className={[
           // box
           "w-full p-4 mb-4 h-auto",
