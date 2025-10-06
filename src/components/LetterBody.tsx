@@ -193,19 +193,19 @@ export default function LetterBody({
         ))}
       </select>
 		  <div className={`flex flex-col h-48 font-[${FONT_STACKS[font]}] justify-end items-end p-4`}>
-					<input onChange={(el) => editLetter("myName", el.target.value)} className="" value={letter.myName} />  
-					<input onChange={(el) => editLetter("myPosition", el.target.value)} className="" value={letter.myPosition} />  
-					<input onChange={(el) => editLetter("myEmail", el.target.value)} className="" value={letter.myEmail} />  
-					<input onChange={(el) => editLetter("myAddress", el.target.value)} className="" value={letter.myAddress} />  
+					<input onChange={(el) => editLetter("myName", el.target.value)} className="w-full text-right" value={letter.myName} />  
+					<input onChange={(el) => editLetter("myPosition", el.target.value)} className="w-full text-right" value={letter.myPosition} />  
+					<input onChange={(el) => editLetter("myEmail", el.target.value)} className="w-full text-right" value={letter.myEmail} />  
+					<input onChange={(el) => editLetter("myAddress", el.target.value)} className="w-full text-right" value={letter.myAddress} />  
 			</div>
 		  <div 
 			  className={`flex flex-col h-48 font-[${FONT_STACKS[font]}] justify-end items-start p-4`}
 				>
-					<input onChange={(el) => editLetter("toName", el.target.value)} className="" value={letter.toName} />  
-					<input onChange={(el) => editLetter("toPosition", el.target.value)} className="" value={letter.toPosition} />  
-					<input onChange={(el) => editLetter("toOrganisation", el.target.value)} className="" value={letter.toOrganisation} />  
-					<input onChange={(el) => editLetter("toAddress", el.target.value)} className="" value={letter.toAddress} />  
-					<input onChange={(el) => editLetter("purpose", el.target.value)} className="mt-2" value={letter.purpose} />  
+					<input onChange={(el) => editLetter("toName", el.target.value)} className="w-full" value={letter.toName} />  
+					<input onChange={(el) => editLetter("toPosition", el.target.value)} className="w-full" value={letter.toPosition} />  
+					<input onChange={(el) => editLetter("toOrganisation", el.target.value)} className="w-full" value={letter.toOrganisation} />  
+					<input onChange={(el) => editLetter("toAddress", el.target.value)} className="w-full" value={letter.toAddress} />  
+					<input onChange={(el) => editLetter("purpose", el.target.value)} className="mt-2 w-full" value={letter.purpose} />  
 			</div>
 
       <textarea
@@ -223,8 +223,8 @@ export default function LetterBody({
 		  <div 
 			  className={`flex flex-col h-48 font-[${FONT_STACKS[font]}] justify-end items-start px-4`}
 				>
-					<input onChange={(el) => editLetter("signoff", el.target.value)} className="pb-20" value={letter.signoff} />  
-					<input onChange={(el) => editLetter("myFinalName", el.target.value)} className="mb-20" value={letter.myFinalName} />  
+					<input onChange={(el) => editLetter("signoff", el.target.value)} className="pb-20 w-full" value={letter.signoff} />  
+					<input onChange={(el) => editLetter("myFinalName", el.target.value)} className="mb-20 w-full" value={letter.myFinalName} />  
 			</div>
 
     </div>
