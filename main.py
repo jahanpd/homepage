@@ -9,7 +9,8 @@ app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "http://localhost:4321"
+        "http://localhost:4321",
+        "https://www.jcpd.xyz"
         ],
     allow_credentials=True,
     allow_methods=["*"],
